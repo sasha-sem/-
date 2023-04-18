@@ -2,7 +2,7 @@ from PIL import Image, ImageFont, ImageDraw
 import os
 from imutils import paths
 
-font = ImageFont.truetype(r'C:\Users\User\Documents\GitHub\NeuralNetworkExercises\Exercise6\Sans_Serif.ttf', size=15, encoding="utf-8")
+font = ImageFont.truetype(r'Exercise6\utils\Sans_Serif.ttf', size=15, encoding="utf-8")
 
 
 def watermark(image_path, text):
@@ -48,7 +48,7 @@ def watermark(image_path, text):
     main.save(os.path.splitext(image_path)[0]+"_watermarked.jpg")
 
 if __name__ == '__main__':
-    imagePaths = sorted(list(paths.list_images(r"C:\Users\User\Documents\GitHub\NeuralNetworkExercises\Exercise6\data\colorize\test\images")))
+    imagePaths = sorted(list(paths.list_images(r"C:\Users\User\Documents\GitHub\NeuralNetworkExercises\Exercise6\data\denoise\valid\gt\images")))
     print(imagePaths)
     for imagePath in imagePaths:
         watermark(imagePath, "github.com/sasha-sem")
